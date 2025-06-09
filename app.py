@@ -4,14 +4,13 @@ from fastapi.responses import HTMLResponse, RedirectResponse, FileResponse
 import gradio as gr
 from groq import Groq
 from pathlib import Path
-from config import api_key
 from config import sys_prompt
 import os
 
 from pydantic import BaseModel
 
 app = FastAPI()
-client = Groq(api_key=api_key)
+client = Groq(api_key=os.environ['GROQ_API_KEY'])
 
 # Mount static files
 app.mount("/static", StaticFiles(directory="."), name="static")
