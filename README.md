@@ -1,9 +1,12 @@
-# 🤖 Chatbot with Custom Login
+# 🤖 Secure Chatbot with Admin Login
 
-A web-based chatbot with a secure login page, built with Gradio and FastAPI. Deployed on Render for live access.
+A protected chatbot with custom authentication, built with Gradio and FastAPI. Deployed on Render for live access.
 
 ## 🔗 Live Demo
 👉 **[Access the Chatbot Here](https://chatbot-with-custom-login.onrender.com)** 👈
+
+**Username:** `admin`  
+**Password:** `umesh`
 
 ## ✨ Features
 - **Custom login page** for secure access
