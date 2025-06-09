@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chatbot Login</title>
+    <link rel="stylesheet" href="login_style.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/13330/13330989.png" class="login-logo">
+            <h2>Login to Chatbot</h2>
+            <form id="loginForm" method="POST" action="/login" enctype="application/x-www-form-urlencoded">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p id="error-message"></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (response.ok) {
+                window.location.href = '/chat';
+            } else {
+                document.getElementById('error-message').textContent = 'Invalid credentials';
+            }
+        });
+    </script>
+</body>
+
+</html>

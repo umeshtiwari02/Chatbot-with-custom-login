@@ -1,0 +1,70 @@
+/* Login Page Styles */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right,
+            rgba(225, 27, 27, 0.7),
+            rgba(52, 79, 168, 0.7),
+            rgba(4, 4, 235, 0.7));
+    /* background-image: url("https://i.pinimg.com/736x/bd/ac/32/bdac327b05ddaa05216dfa08c9e734c3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+
+.login-box {
+    background: rgb(224, 223, 223, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.login-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+#loginForm input {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 8px 0;
+    color: white;
+    background-color: transparent;
+    border: 1px solid #a8a6a6;
+    border-radius: 8px;
+}
+
+
+#loginForm button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: #0952ed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#error-message {
+    color: #ef4444;
+    margin-top: 1rem;
+}
+
+/* Keep your existing chatbot styles below */
