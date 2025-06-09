@@ -7,8 +7,6 @@ from pathlib import Path
 from config import sys_prompt
 import os
 
-from pydantic import BaseModel
-
 app = FastAPI()
 client = Groq(api_key=os.environ['GROQ_API_KEY'])
 
@@ -19,7 +17,7 @@ app.mount("/static", StaticFiles(directory="."), name="static")
 @app.post("/login")
 async def login(request: Request):
     data = await request.json()
-    if data["username"] == "admin" and data["password"] == "password123":
+    if data["username"] == "admin" and data["password"] == "umesh":
         return {"status": "success"}
     raise HTTPException(status_code=401, detail="Invalid credentials")
 
